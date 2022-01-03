@@ -21,12 +21,11 @@ attempts = 1
 out_of_guesses = False
 # Take input from the user
 
-print("Please note that for this game you have only a Maximum of 3 Attempts to get the secret word correctly. Good Luck!!!")
+
 while (attempts <= max_attempts):
     guess_word = input("Enter a word: ")
     if guess_word.casefold() == secret_word.casefold():
-        print("Hurray!!! you guessed the word correctly")
-        break
+        print("Hurray you got the correct word succesfully")
     
     
     else:
@@ -42,6 +41,6 @@ while (attempts <= max_attempts):
 else:
     out_of_guesses = True
     if out_of_guesses:
-            print("Sorry! you are out of guess attempts")
+            print("Sorry you are out of guess attempts")
     
     
