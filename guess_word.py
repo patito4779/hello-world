@@ -1,17 +1,21 @@
-#1. The problem here is to Take an input word and check if it matches secret word under a given number of tries
+#1. The problem here is to create a random word from a list of words and check if it matches the users guess under a given number of tries
 
 #2. Research: This problem can be solved with some while and conditional statements
 
-""" 3. Planning: We want to write the code such that If word is not guessed correctly, A print Failed Attempt try again + number of tries left will be outputted to screen
+""" 3. Planning: We want to write the code such that If word is not guessed correctly, A print Failed Attempt try again + number of tries left will be printed to screen
     After 3 tries of incorrect guesses, Then we will print the statement Out of guesses to screen """
     
 #4. Now let's go with writing the code
 
 import re
+import random as rn
 
 # Let us initialize a guess word
-secret_word = "Picnic"
-secret_word = secret_word.lower()
+secret_word_list = ["Picnic", "Patrick", "list", "spongebob", "scoobydoo", "unicorn", "food", "orange", "love", "Football", "Life", "Television"]
+
+secret_word = rn.choice(secret_word_list)
+
+
 
 # Let us set the maximum number of attempts possible
 max_attempts = 3
@@ -33,10 +37,6 @@ while (attempts <= max_attempts):
         print("You have {} attempts left".format(tries_left -1))
         tries_left-= 1
         attempts += 1
-        
-        
-        
-    
         
         
 else:
